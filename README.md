@@ -1,6 +1,9 @@
 
 
 
+
+
+
 ## SWU AI Deep Learning 
 
 <img width="800" height = "400" src="https://user-images.githubusercontent.com/58849278/117119604-46a43680-adcd-11eb-91cc-d489f17dbef1.png">
@@ -13,27 +16,16 @@
 ## GOAL 
 
 :heavy_check_mark: 딥러닝의 지도학습, 비지도학습, 강화학습 이론 이해
-
 :heavy_check_mark: MNIST DATA 활용
-
 :heavy_check_mark: Linear Regression 실습
-
 :heavy_check_mark: Gradient Descent Optimizer 사용 
-
 :heavy_check_mark: Logisitic Regression 실습 
-
 :heavy_check_mark: Adam Optimizer 사용 
-
 :heavy_check_mark: 과적합 방지를 위한 DropOut 정리 및 실습, 비용함수는 cross-entropy 활용 
-
 :heavy_check_mark: RMS Prop Optimzer과 Adagrad 함수의 비교 및 실습 
-
 :heavy_check_mark: CNN Adam Optimizer 실습 
-
 :heavy_check_mark: CNN의 최적화 방법으로 adam optimizer과 rmsprop optimzer 실습 후 정확도 비교 
-
 :heavy_check_mark: 학습 모델에 적합한 비용함수를 사용하여 학습률 확인 
-
 
 
 ## 선형회귀모델
@@ -118,7 +110,36 @@
  1. Dropout이 1에 가까울 때, 정확도가 높게 나오는 것을 확인
  2. 과적합을 막아주는 기법인 dropout 을 사용하면 시간이 오래 걸린다는 단점이 있지만 이를 보완해주는 배치 정규화 기법을 사용하여 학습 속도를 향상 시킬 수 있었다. 
 
+## CNN 
 
+**설정 환경**
 	
 
+ - MNIST DATA 
+ - 합성곱 신경망은 입력층, 출력층, Convolutional Layer 2개로 구성 
+ - 컨볼루션 레이어는 각각 2X2 max pooling 적용 
+ - Fully connected layer 2개를 추가 구성하여 각각 28 x 28 = 256 
+ - Dropout 수치는 0.8 고정
+ - 비용함수는 cross-entropy 사용 
+ - 최적화는 Adam optimizer과 RmsProp optimizer 사용하여 비교 
 
+## 결과 분석 
+
+**Adam Optimizer 적용 결과** 
+
+![image](https://user-images.githubusercontent.com/58849278/117125515-90dce600-add4-11eb-84e6-063bfc0581fc.png)
+
+**RMS Prop - Optimizer 적용 결과**
+![image](https://user-images.githubusercontent.com/58849278/117125641-c550a200-add4-11eb-9a48-cd86e00c7734.png)
+
+**Conclusion** 
+
+![image](https://user-images.githubusercontent.com/58849278/117125805-faf58b00-add4-11eb-9ecb-ae9366172f3b.png)
+
+1. Adam을 사용했을 때, 1st epoch에서 cost 값이 0.472로 나왔고 Rms prop을 사용했을 때 1.177이 나왔다. 
+
+2. RMS prop 최적화가 완료될 때까지 cost는 처음 1.177 이후에 0.118, 0.076, 0.049, ... 0.028 까지 줄어드는 것을 볼 수 있다. 
+
+3. Adam optimizer 최적화가 완료될 때까지 cost는 처음 0.472, 0.143, 0.101, 0.078, ... 0.022 까지 줄어드는 것을 볼 수 있다. 
+
+4. 각 네트워크마다 특성이 다르기 때문에 어떤 최적화 함수가 좋다고 판단할 수 없지만 Adam Optimizer 가 Adagrad와 Rms Prop의 장점을 섞어 놓은 것으로 좋은 성과를 내고 있다. 
