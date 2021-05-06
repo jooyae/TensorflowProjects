@@ -16,16 +16,27 @@
 ## GOAL 
 
 :heavy_check_mark: 딥러닝의 지도학습, 비지도학습, 강화학습 이론 이해
+
 :heavy_check_mark: MNIST DATA 활용
+
 :heavy_check_mark: Linear Regression 실습
+
 :heavy_check_mark: Gradient Descent Optimizer 사용 
+
 :heavy_check_mark: Logisitic Regression 실습 
+
 :heavy_check_mark: Adam Optimizer 사용 
+
 :heavy_check_mark: 과적합 방지를 위한 DropOut 정리 및 실습, 비용함수는 cross-entropy 활용 
+
 :heavy_check_mark: RMS Prop Optimzer과 Adagrad 함수의 비교 및 실습 
+
 :heavy_check_mark: CNN Adam Optimizer 실습 
+
 :heavy_check_mark: CNN의 최적화 방법으로 adam optimizer과 rmsprop optimzer 실습 후 정확도 비교 
+
 :heavy_check_mark: 학습 모델에 적합한 비용함수를 사용하여 학습률 확인 
+
 
 
 ## 선형회귀모델
