@@ -154,3 +154,17 @@
 3. Adam optimizer 최적화가 완료될 때까지 cost는 처음 0.472, 0.143, 0.101, 0.078, ... 0.022 까지 줄어드는 것을 볼 수 있다. 
 
 4. 각 네트워크마다 특성이 다르기 때문에 어떤 최적화 함수가 좋다고 판단할 수 없지만 Adam Optimizer 가 Adagrad와 Rms Prop의 장점을 섞어 놓은 것으로 좋은 성과를 내고 있다. 
+
+## Build Basic CNN model for Image Classification 
+
+1. *Architecture of the model :* 
+
+	<img src ="https://user-images.githubusercontent.com/58849278/122499312-ad9f4700-d02b-11eb-9ae6-9d4134c17f01.png" width = 60%>
+ 
+ 2. *Fully Connected Neural Network (Keras) :*
+ 
+	 <img src= "https://user-images.githubusercontent.com/58849278/122499454-eb03d480-d02b-11eb-947b-2517656ce7c0.png" width = 90%>
+
+2. *Just 10 epochs, you can see **94%+** validation accuracy :*
+
+	<img src ="https://user-images.githubusercontent.com/58849278/122499644-37e7ab00-d02c-11eb-9dbb-bf045d8d582b.png" width = 90%>
